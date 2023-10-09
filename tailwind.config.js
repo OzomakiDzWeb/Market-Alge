@@ -7,11 +7,12 @@ export default {
    darkMode: 'class',
   theme: {
     colors:{
-      'gray':'#f2f3f4',
+      'gray':'#c1c6cb',
       'white':'#ffffff',
       'green':'#3cb47c',
       'orang':'#f8c144',
       'black':'#f8c144',
+      'blak-extri':'#2c3232',
       'bleu-dark':'#f8c144',
       'green-dark':'#f8c144'
     },
