@@ -1,10 +1,14 @@
 {
       "Header":{
-          "home":"ACCUEIL",
-          "link1":"NOTRE MISSION",
-          "link2":"COMMENT ÇA FONCTIONNE",
-          "btn-header":"Demander Demo"
-     }
+          "cart":"Chariot",
+          "wishlist":"Favoris",
+          "gategories":"Categories",
+          "home":"Acctuile",
+          "about":"A propos",
+          "shop":"Boutque",
+          "blog":"Blog",
+          "Contact":"Contact"
+         }
 
 }
 

@@ -1,10 +1,14 @@
 {
      "Header":{
-          "home":"HOME",
-          "link1":"WHY WE EXIST",
-          "link2":"HOW IT WORKES",
-          "btn-header":"Book Demo"
-     }
+          "cart":"Cart",
+          "wishlist":"WitshList",
+          "gategories":"Categories",
+          "home":"Home",
+          "about":"About",
+          "shop":"Shop",
+          "blog":"Blog",
+          "Contact":"Contact"
+         }
      
      
 }
