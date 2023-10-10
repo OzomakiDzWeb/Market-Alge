@@ -13,7 +13,7 @@ export default {
       'orang':'#f8c144',
       'black':'#f8c144',
       'blak-extri':'#2c3232',
-      'bleu-dark':'#f8c144',
+      'orng-extri':'#fde1bd',
       'green-dark':'#f8c144'
     },
      fontSize:{

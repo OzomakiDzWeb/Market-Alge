@@ -1,4 +1,4 @@
-import { t } from 'i18next'
+
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import {BiMenu, BiSolidUserCircle} from 'react-icons/bi'
@@ -7,9 +7,11 @@ import {AiFillCaretDown, AiFillCaretUp} from 'react-icons/ai'
 import {RiMenuSearchLine} from 'react-icons/ri'
 import { Link, NavLink } from 'react-router-dom'
 import TicketCategori from './TicketCategori'
+import NavMobil from './NavMobil'
 const Header = () => {
 
 const {t}=useTranslation()
+  const [ShowMobilMenu,setShowMobilMenu]=useState(false)
    const [active,setactive] = useState(null)
    const [ShowCategore,setShowCategore]=useState(true)
     const [darkMode, setDarkMode] = useState(() => {
@@ -71,7 +73,7 @@ const {t}=useTranslation()
               <option className="lang" value='fr'>fr</option>
               <option className="lang" value='ar'>ar</option>
               </select>
-          <BiMenu size={30} className='md:hidden flex'/>
+          <BiMenu onClick={()=>setShowMobilMenu(true)} size={30} className='md:hidden flex'/>
         </div>
      </div>
     <div className=' justify-between items-center py-2 hidden sm:flex px-5 dark:bg-blak-extri/60 dark:text-white'>
@@ -103,6 +105,8 @@ const {t}=useTranslation()
         <NavLink to={'/contact'} className={activLik}>{t('Header.Contact')}</NavLink>
       </div>
     </div>
+    {ShowMobilMenu && <NavMobil setShowMobilMenu={setShowMobilMenu} setDarkMode={setDarkMode} darkMode={darkMode}/>}
+
     </div>
   )
 }
