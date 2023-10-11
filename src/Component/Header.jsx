@@ -13,7 +13,7 @@ const Header = () => {
 const {t}=useTranslation()
   const [ShowMobilMenu,setShowMobilMenu]=useState(false)
    const [active,setactive] = useState(null)
-   const [ShowCategore,setShowCategore]=useState(true)
+   const [ShowCategore,setShowCategore]=useState(false)
     const [darkMode, setDarkMode] = useState(() => {
     // Check the user's preference in local storage
     const savedDarkMode = localStorage.getItem('darkMode');
@@ -46,7 +46,7 @@ const {t}=useTranslation()
     
     const activLik=({isActive})=>(isActive?" animate-link font-bold":'font-bold')
   return (
-    <div className={`${active?'py-0 shadow-lg transition-all duration-300 rounded-lg':'fixed w-full '}`}>
+    <div className={`py-0 shadow-lg ${active?'pb-0 ':'pb-4'} transition-all duration-300 rounded-lg fixed w-full z-30`}>
       <div className='flex py-4 w-full justify-between items-center bg-gray px-5 dark:bg-blak-extri dark:text-white transition-all duration-200'>
       <div className='flex sm:flex-row flex-col flex-shrink-0 '>
         Market<span className='text-green'>-Alg</span>
@@ -76,7 +76,7 @@ const {t}=useTranslation()
           <BiMenu onClick={()=>setShowMobilMenu(true)} size={30} className='md:hidden flex'/>
         </div>
      </div>
-    <div className=' justify-between items-center py-2 hidden sm:flex px-5 dark:bg-blak-extri/60 dark:text-white'>
+    <div className={`${active?'bg-green':''} justify-between items-center py-2 hidden sm:flex px-5  dark:bg-gray `}>
       <button className='flex relative bg-orang rounded-lg gap-2 px-2 py-2'>
         <RiMenuSearchLine size={20}/>
         <p>{t('Header.gategories')}</p>

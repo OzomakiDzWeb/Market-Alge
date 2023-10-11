@@ -14,11 +14,11 @@ import WishList from './Pages/WishList'
 import Page404 from './Pages/Page404'
 const App = () => {
   return (
-    <div >
+    <div className='flex dark:bg-blak-extri ' >
        <div>
         <Header/>
        </div>
-        <div>
+        <div className='mt-[85px] md:mt-[125px]'>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>

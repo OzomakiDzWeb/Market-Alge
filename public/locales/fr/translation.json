@@ -8,7 +8,25 @@
           "shop":"Boutque",
           "blog":"Blog",
           "Contact":"Contact"
-         }
+         },
+          "Home":{
+          "section1":{
+               "div1":{
+                    "title1":"Offre exclusive -30%",
+                    "title2":{
+                         "p1":"Nourrissez votre famille",
+                         "p2":"au meilleur prix"  },
+                    "button":"Achetez maintenant"
+                    },
+                    "div2":{
+                         "title1":"Le meilleur produit biologique en ligne",
+                         "title2":"Enregistrer dans 50%"
+                    },
+                    "div3":{
+                         "title1":"Chaque jour frais et propre avec nos produits"
+                    }
+               }
+          }
 
 }
 

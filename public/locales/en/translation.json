@@ -8,7 +8,25 @@
           "shop":"Shop",
           "blog":"Blog",
           "Contact":"Contact"
+         },
+         "Home":{
+          "section1":{
+               "div1":{
+                    "title1":"Exclusive Offer -30%",
+                    "title2":{
+                         "p1":"Feed Your Family",
+                         "p2":"at best price"  },
+                    "button":"Shop Now"
+                    },
+                    "div2":{
+                         "title1":"The best Organic product Online",
+                         "title2":"Save to 50%"
+                    },
+                    "div3":{
+                         "title1":"Evryday Fresh & Clean with Our Products"
+                    }
+               }
+          }
          }
      
      
-}

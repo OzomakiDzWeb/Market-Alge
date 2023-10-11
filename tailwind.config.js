@@ -48,7 +48,13 @@ export default {
         fontWeight:'700'
       }],
     },
-    extend: {},
+    extend: {
+       backgroundImage: {
+        'home1': "url('assets/img/Home-1.png')",
+        'home2': "url('assets/img/Home-2.png')",
+        'home3': "url('assets/img/Home-3.png')",
+      }
+    },
   },
   plugins: [],
 };
