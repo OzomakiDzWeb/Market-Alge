@@ -16,7 +16,7 @@ const Section1Home = () => {
               <p className='text-x py-5 leading-5'>{t('Home.section1.div2.title1')} <br/>{t('Home.section1.div2.title1')}</p>
               <p>{t('Home.section1.div2.title2')}</p>
             </div>
-            <div className='rounded-[50%] w-[100px] h-[100px] flex justify-center items-center p-2 bg-orang'>
+            <div className='rounded-[50%] w-[100px] h-[100px] flex items-center justify-center  bg-orang'>
              {t('Home.section1.div2.title2')}  
             </div>
           </div>

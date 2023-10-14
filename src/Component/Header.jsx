@@ -46,7 +46,7 @@ const {t}=useTranslation()
     
     const activLik=({isActive})=>(isActive?" animate-link font-bold":'font-bold')
   return (
-    <div className={`py-0 shadow-lg ${active?'pb-0 ':'pb-4'} transition-all duration-300 rounded-lg fixed w-full z-30`}>
+    <div className={`py-0 shadow-lg ${active?'pb-0 ':'pb-4'} mb-5 transition-all duration-300 rounded-lg fixed w-full z-30`}>
       <div className='flex py-4 w-full justify-between items-center bg-gray px-5 dark:bg-blak-extri dark:text-white transition-all duration-200'>
       <div className='flex sm:flex-row flex-col flex-shrink-0 '>
         Market<span className='text-green'>-Alg</span>
