@@ -55,6 +55,7 @@ export default {
         'home3': "url('assets/img/Home-3.png')",
         'bg-home': "url('assets/img/background-home.png')",
         'bg-home1': "url('assets/img/banner-1.png')",
+        'bg-layer': "url('/src/assets/img/layer.png')",
         'bg-feature1': "url('assets/img/feature-1.png')",
         'bg-feature2': "url('assets/img/feature-2.png')",
         'bg-feature3': "url('assets/img/feature-3.png')",
