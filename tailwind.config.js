@@ -60,6 +60,7 @@ export default {
         'bg-feature2': "url('assets/img/feature-2.png')",
         'bg-feature3': "url('assets/img/feature-3.png')",
         'bg-feature4': "url('assets/img/feature-4.png')",
+        'bg-about-9': "url('assets/img/about-9.png')",
       }
     },
   },
