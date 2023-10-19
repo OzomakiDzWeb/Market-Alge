@@ -1,6 +1,7 @@
 import React from 'react'
 import Ticket from '../Component/Ticket'
-
+import FooterBottm from '../Component/FooterBottm'
+import {BsFacebook, BsInstagram, BsSkype, BsTwitter} from 'react-icons/bs'
 const About = () => {
   return (
     <div className='mt-5 mx-5'>
@@ -57,8 +58,8 @@ const About = () => {
         </div>
       </div>
       {/* section  4 */}
-      <div className='bg-bg-about-9 bg-cover bg-no-repeat bg-center bg-fixed rounded-[30px] my-10'>
-        <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 bg-black/70 text-white rounded-[30px] '>
+      <div className='bg-bg-about-9 h-[30vh] bg-cover bg-no-repeat bg-center bg-fixed rounded-[30px] my-10'>
+        <div className=' grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 h-full bg-black/70 text-white rounded-[30px] content-center '>
          <div className='flex flex-col items-center my-10'>
            <h1 className='text-xxl'>3+</h1>
            <p className='text-x'>Glorious years</p>
@@ -81,6 +82,48 @@ const About = () => {
          </div>
         </div>
       </div>
+      {/* section 5 */}
+      <div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-1 '>
+        <div className='col-span-1 sm:col-span-1 md:col-span-1 p-3 '>
+          <h2 className='text-green text-xl'>Our Team</h2>
+          <h1 className='my-3 text-xl dark:text-white'>Meet Our Expert Team</h1>
+          <p className='text-[#aaaa]'>Ed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
+          <p className='my-3 text-[#aaaa]'>Pitatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia</p>
+          <button className='btn bg-green w-2/3'>View All Members</button>
+        </div>
+        <div className='grid sm:grid-cols-2 md:col-span-2 gap-1 '>
+          <div className='bg-gray relative'>
+            <img src='/src/assets/img/client-1.png'/>
+            <div className='dark:bg-black  absolute w-2/3 left-[50%] -translate-x-[50%] bottom-0 hover:bottom-9 transition-all duration-300 bg-white rounded-t-lg p-3 text-center'>
+              <div className='text-xl dark:text-white'>H. Merinda</div>
+              <div className='my-3 text-[#aaa]'>CEO & Co-Founder</div>
+              <div className='flex justify-evenly text-green'>
+                <BsFacebook size={20} className='hover:scale-150 cursor-pointer'/>
+                <BsTwitter size={20} className='hover:scale-150 cursor-pointer'/>
+                <BsSkype size={20} className='hover:scale-150 cursor-pointer'/>
+                <BsInstagram size={20} className='hover:scale-150 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+          <div className='bg-green relative'>
+            <img src='/src/assets/img/client-2.png'/>
+             <div className='dark:bg-black  absolute w-2/3 left-[50%] -translate-x-[50%] bottom-0 hover:bottom-9 transition-all duration-300 bg-white rounded-t-lg p-3 text-center'>
+              <div className='text-xl dark:text-white'>Dilan Specter</div>
+              <div className='my-3 text-[#aaa]'>Head Engineer</div>
+              <div className='flex justify-evenly text-green'>
+                <BsFacebook size={20} className='hover:scale-150 cursor-pointer'/>
+                <BsTwitter size={20} className='hover:scale-150 cursor-pointer'/>
+                <BsSkype size={20} className='hover:scale-150 cursor-pointer'/>
+                <BsInstagram size={20} className='hover:scale-150 cursor-pointer'/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='my-10'>
+        <FooterBottm/>
+      </div>
+
     </div>
   )
 }
