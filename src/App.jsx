@@ -15,26 +15,20 @@ import Page404 from './Pages/Page404'
 
 import axios from 'axios'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { getDataProduct } from './Redux-toolkit/productSlic'
 
 const App = () => {
-  const [data,setData]=useState([])
-const [err,seterr]=useState('')
-const [loding,setloding]=useState(false)
-useEffect(()=>{
- async function fetchdata(){
-  setloding(true)
-  axios.get('https://api-xh9w.onrender.com/products').then(res=>
-  {setloding(false)
-    setData(res.data)
-  }).catch(err=>seterr(err.meesage))
+
+ const dispatch=useDispatch()
+  useEffect(()=>{
+ const fetchProduct=async ()=>{
+  dispatch(getDataProduct())
 }
-fetchdata()
-},[])
+fetchProduct()
+  },[dispatch])
 
 
-console.log(data,err,loding)
-  
   return (
     <div className='flex dark:bg-blak-extri ' >
        <div>
@@ -45,7 +39,7 @@ console.log(data,err,loding)
         <div className='mt-[85px] md:mt-[125px]'>
     
           <Routes>
-            <Route path='/' element={<Home data={data} loding={loding} err={err}/>}/>
+            <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/Cart' element={<Cart/>}/>

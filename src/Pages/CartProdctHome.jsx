@@ -5,7 +5,7 @@ import { AiFillEye, AiFillHeart } from 'react-icons/ai'
 const CartProdctHome = ({product}) => {
   
   return (
-    <div className='bg-white relative dark:bg-blak-extri dark:text-white p-4 rounded-lg text-center'>
+    <div className='bg-white relative shadow-lg cursor-pointer hover:scale-105 transition-all duration-200 dark:bg-blak-extri dark:text-white p-4 rounded-lg text-center'>
      
      <div className='absolute bg-orang rounded'>{product['number-order']||product.rate||product.discount}</div>
      <div className='flex justify-center'>
