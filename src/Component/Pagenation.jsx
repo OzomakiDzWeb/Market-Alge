@@ -1,6 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next';
-import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 
 const Pagenation = ({productPerPage,totalProduct,pagenate,currentPage}) => {
      const pageNember=[];
@@ -8,22 +6,18 @@ const Pagenation = ({productPerPage,totalProduct,pagenate,currentPage}) => {
          pageNember.push(i) 
      }
   
-
-   
-  return (
+   return (
    <nav className='mt-5 ' >
-     
-
-      <ul className='flex flex-row flex-wrap items-center justify-center  ' >
+     <ul className='flex flex-row flex-wrap items-center justify-center' >
           {pageNember.map(num=>(
-               <li key={num} className={`${currentPage===num?'bg-green':'bg-orang'} cursor-pointer h-[25px] w-[25px] flex items-center justify-center p-1  m-2 rounded-[50%] border`}>
+               <li key={num} 
+                 className={`${currentPage===num?'bg-green':'bg-orang'} 
+                 cursor-pointer h-[25px] w-[25px] flex items-center justify-center p-1  m-2 rounded-[50%] border`}>
                     <a onClick={()=>{pagenate(num)}} >{num}</a>
                </li>
           ))}
      </ul>
- 
-   
-   </nav>
+ </nav>
   )
 }
 

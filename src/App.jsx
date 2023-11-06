@@ -13,9 +13,7 @@ import Shop from './Pages/Shop'
 import WishList from './Pages/WishList'
 import Page404 from './Pages/Page404'
 
-import axios from 'axios'
-
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { getDataProduct } from './Redux-toolkit/productSlic'
 
 const App = () => {
@@ -32,13 +30,10 @@ fetchProduct()
   return (
     <div className='flex dark:bg-blak-extri ' >
        <div>
-        
-   
         <Header/>
        </div>
         <div className='mt-[85px] md:mt-[125px]'>
-    
-          <Routes>
+        <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/blog' element={<Blog/>}/>
@@ -50,12 +45,10 @@ fetchProduct()
             <Route path='/wishList' element={<WishList/>}/>
             <Route path='/page404' element={<Page404/>}/>
           </Routes>
-          
         </div>
       <div>
          <Footer/>
-
-      </div>
+       </div>
     </div>
   )
 }
