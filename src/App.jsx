@@ -28,7 +28,7 @@ fetchProduct()
 
 
   return (
-    <div className='flex dark:bg-blak-extri ' >
+    <div className='flex flex-col dark:bg-blak-extri ' >
        <div>
         <Header/>
        </div>
