@@ -10,7 +10,10 @@ import Ticket from '../Component/Ticket';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
+
 const Home = () => {
+
+
   const data = useSelector((state) => state.products);
   const topRating = data.data["top-rating"] || [];
   const discount = data.data["discount"] || [];

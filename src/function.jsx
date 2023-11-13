@@ -38,3 +38,4 @@ export function filterProductBayPrice(value,productes){
         return productes.filter(product=>product.price > 150); 
       }   
 }
+
