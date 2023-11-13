@@ -25,7 +25,19 @@
                     "div3":{
                          "title1":"Evryday Fresh & Clean with Our Products"
                     }
-               }
+               },
+          "section2":{
+               "photo":{
+                    "title1":"Daily Best Sells",
+                    "title2":"Exclusive Offer - 20% Off",
+                    "p":"Specialist in the grocery store from $7.99"
+                       },
+                "top":{
+                    "order":"Top Order",
+                    "discount":"Top Discount",
+                    "Ratiang":"Top Rating"
+                }
+          }
           }
          }
      

@@ -25,7 +25,19 @@
                     "div3":{
                          "title1":"Chaque jour frais et propre avec nos produits"
                     }
-               }
+               },
+             "section2":{
+               "photo":{
+                    "title1":"Meilleures ventes quotidiennes",
+                    "title2":"Offre exclusive - 20 % de réduction",
+                    "p":"Spécialiste en épicerie à partir de 7,99$"
+                       },
+                "top":{
+                    "order":"Meilleure commande",
+                    "discount":"Meilleure remise",
+                    "Ratiang":"Meilleure note"
+                }
+          }
           }
 
 }

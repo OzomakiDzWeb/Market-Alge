@@ -8,13 +8,15 @@ import Slider from '../Component/SliderBlog'
 import FooterBottm from '../Component/FooterBottm';
 import Ticket from '../Component/Ticket';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
+
 const Home = () => {
   const data = useSelector((state) => state.products);
   const topRating = data.data["top-rating"] || [];
   const discount = data.data["discount"] || [];
   const topOrder = data.data["number-orders"] || [];
  const [activProduct,setActivProduct]=useState('order')
-
+const {t}=useTranslation()
 
 
   return (
@@ -24,20 +26,20 @@ const Home = () => {
       <SliderHome/>
       <div className='flex flex-col justify-center items-center md:grid grid-cols-6 mx-5 rounded-[50px] bg-gray'>
         <div className='col-span-2 bg-bg-home bg-cover bg-center bg-no-repeat rounded-[50px]'>
-         <div className='w-full h-full  flex-flex-col p-3 bg-gradient-to-t from-green to-orang/60 rounded-[50px] '>
+         <div className='w-full h-full  flex-flex-col p-4 bg-gradient-to-t from-green to-orang/60 rounded-[50px] '>
          <div className='sm:w-1/2 text-white'>
-             <h1 className='text-xxl leading-7'>Daily Best Sells</h1>
-            <p className='text-xl my-5'>Exclusive Offer - 20% Off</p>
-            <h3>Specialist in the grocery store from $7.99</h3>
+             <h1 className='text-xxl leading-7'>{t('Home.section2.photo.title1')}</h1>
+            <p className='text-xl my-5'>{t('Home.section2.photo.title2')}</p>
+            <h3>{t('Home.section2.photo.p')}</h3>
          </div>
             <img  className='  aspect-square' src='/src/assets/img/banner-1.png'/>
           </div>
         </div>
         <div className='  col-span-4  p-5'>
           <div className='flex justify-around my-4'>
-            <div style={{color:`${activProduct==='order'?'#3cb47c':'#000'}`}} onClick={()=>setActivProduct('order')} className='flex gap-2 items-center cursor-pointer '><AiFillTags/>Top Order</div>
-            <div style={{color:`${activProduct==='discount'?'#3cb47c':'#000'}`}} onClick={()=>setActivProduct('discount')} className='flex gap-2 items-center cursor-pointer '><AiOutlinePercentage/>Top Discount</div>
-            <div style={{color:`${activProduct==='rating'?'#3cb47c':'#000'}`}} onClick={()=>setActivProduct('rating')} className='flex gap-2 items-center cursor-pointer '><PiPentagramBold/>Top Rating</div>
+            <div style={{color:`${activProduct==='order'?'#3cb47c':'#000'}`}} onClick={()=>setActivProduct('order')} className='flex gap-2 items-center cursor-pointer '><AiFillTags/>{t('Home.section2.top.order')}</div>
+            <div style={{color:`${activProduct==='discount'?'#3cb47c':'#000'}`}} onClick={()=>setActivProduct('discount')} className='flex gap-2 items-center cursor-pointer '><AiOutlinePercentage/>{t('Home.section2.top.discount')}</div>
+            <div style={{color:`${activProduct==='rating'?'#3cb47c':'#000'}`}} onClick={()=>setActivProduct('rating')} className='flex gap-2 items-center cursor-pointer '><PiPentagramBold/>{t('Home.section2.top.Ratiang')}</div>
           </div>
           <div className='grid grid-cols-1 sm:grid-cols-2  gap-1 md:grid-cols-4'>
           

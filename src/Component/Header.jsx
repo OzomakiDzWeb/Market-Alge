@@ -53,9 +53,11 @@ const {t}=useTranslation()
       </div>
       <input className='px-2 py-1 rounded-lg outline-none flex-grow mx-5' type='text' placeholder='Search for Product'/>
        <div className='flex gap-3 items-center'>
-         <div className='md:flex flex-row hidden h-5 w-5 rounded-[40%]'>
-          <BiSolidUserCircle  size={20}/>
-         </div>
+       
+          <Link to='/login' className='cursor-pointer'>Login</Link>
+          <Link to='/sgin' className='cursor-pointer'>Sgin</Link>
+         
+   
         <Link className='relative    sm:flex hidden  rounded-[40%] justify-center items-center gap-1 px-2 ' to='cart'>
           <BsFillCartFill size={20}/>{t('Header.cart')}
           <span className='absolute -top-3 rounded-full h-5 w-5 flex justify-center items-center left-[15px] bg-green'>0</span>
