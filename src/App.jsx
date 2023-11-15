@@ -13,8 +13,11 @@ import Shop from './Pages/Shop'
 import WishList from './Pages/WishList'
 import Page404 from './Pages/Page404'
 
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getDataProduct } from './Redux-toolkit/productSlic'
+import Details from './Component/Details'
+import { allProducts } from './function'
+import { ToastContainer } from 'react-toastify'
 
 const App = () => {
 
@@ -25,16 +28,18 @@ const App = () => {
 }
 fetchProduct()
   },[dispatch])
-
-
+ const data = useSelector((state) => state.products);
+  const AllProductes=allProducts(data.data)
+const [showDetails,setShowDetails]=useState(false)
+  const [product,setproduct]=useState([])
   return (
-    <div className='flex flex-col dark:bg-blak-extri ' >
+    <div className='flex flex-col dark:bg-blak-extri relative ' >
        <div>
         <Header/>
        </div>
         <div className='mt-[85px] md:mt-[125px]'>
         <Routes>
-            <Route path='/' element={<Home/>}/>
+            <Route path='/' element={<Home setproduct={setproduct} setShowDetails={setShowDetails}/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/blog' element={<Blog/>}/>
             <Route path='/Cart' element={<Cart/>}/>
@@ -43,12 +48,15 @@ fetchProduct()
             <Route path='/sgin' element={<Sgin/>}/>
             <Route path='/shop' element={<Shop/>}/>
             <Route path='/wishList' element={<WishList/>}/>
-            <Route path='/page404' element={<Page404/>}/>
+            <Route path='/*' element={<Page404/>}/>
+            {/* <Route path='/details' element={<Details/>}/> */}
           </Routes>
         </div>
       <div>
          <Footer/>
        </div>
+       <Details product={product} AllProductes={AllProductes} showDetails={showDetails} setShowDetails={setShowDetails}/>
+       
     </div>
   )
 }

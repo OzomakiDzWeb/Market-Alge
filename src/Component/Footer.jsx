@@ -4,7 +4,7 @@ import { BiCurrentLocation, BiPhoneCall } from 'react-icons/bi'
 
 const Footer = () => {
   return (
-    <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 bg-gray p-5 dark:bg-black text-gray'>
+    <div className='grid grid-cols-2 sm:grid-cols-3 text-black md:grid-cols-4 gap-3 bg-gray p-5 dark:bg-black '>
       <div className='overflow-hidden'>
          <div className='flex sm:flex-row flex-col flex-shrink-0 text-xxl mb-3'>
         Market<span className='text-green'>-Alg</span>

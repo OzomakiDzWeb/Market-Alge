@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
 
 
-const Home = () => {
+const Home = ({setShowDetails,setproduct}) => {
 
 
   const data = useSelector((state) => state.products);
@@ -47,13 +47,13 @@ const {t}=useTranslation()
           <div className='grid grid-cols-1 sm:grid-cols-2  gap-1 md:grid-cols-4'>
           
               {data.loading?<h1>loding..</h1>:topOrder.map(produ=>{
-            return <div style={{display:`${activProduct==='order'?'block':'none'}`}} key={produ.id}>  <CartProdctHome product={produ}/></div>
+            return <div style={{display:`${activProduct==='order'?'block':'none'}`}} key={produ.id}>  <CartProdctHome product={produ} setShowDetails={setShowDetails} setproduct={setproduct}/></div>
               })}
                {data.loading?<h1>loding..</h1>:topRating.map(produ=>{
-            return  <div style={{display:`${activProduct==='rating'?'block':'none'}`}} key={produ.id}> <CartProdctHome  product={produ}/></div>
+            return  <div style={{display:`${activProduct==='rating'?'block':'none'}`}} key={produ.id}> <CartProdctHome  product={produ} setShowDetails={setShowDetails} setproduct={setproduct}/></div>
               })}
                {data.loading?<h1>loding..</h1>:discount.map(produ=>{
-            return <div style={{display:`${activProduct==='discount'?'block':'none'}`}} key={produ.id}>  <CartProdctHome product={produ}/></div>
+            return <div style={{display:`${activProduct==='discount'?'block':'none'}`}} key={produ.id}>  <CartProdctHome product={produ} setShowDetails={setShowDetails} setproduct={setproduct}/></div>
               })}
             </div>
         </div>

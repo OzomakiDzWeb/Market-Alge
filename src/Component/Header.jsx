@@ -11,6 +11,7 @@ import NavMobil from './NavMobil'
 import { useSelector } from 'react-redux';
 const Header = () => {
 const cart=useSelector(state=>state.cart.cartItmes)
+const WatchListProduct = useSelector((state) => state.watchList.watchList)
 const nemberProduct=cart.length
 const {t}=useTranslation()
   const [ShowMobilMenu,setShowMobilMenu]=useState(false)
@@ -66,7 +67,7 @@ const {t}=useTranslation()
         </Link>
         <Link className='relative  sm:flex hidden   rounded-[40%] justify-center items-center gap-1 px-2 ' to='wishList'>
           <BsFillHeartFill size={20}/>{t('Header.wishlist')}
-          <span className='absolute -top-3 rounded-full h-5 w-5 flex justify-center items-center left-[15px] bg-green'>0</span>
+          <span className='absolute -top-3 rounded-full h-5 w-5 flex justify-center items-center left-[15px] bg-green'>{WatchListProduct.length}</span>
         </Link>
          <button className='rounded-[40%] ' onClick={()=>setDarkMode(!darkMode)}>
              <img className='md:block hidden' src={`/src/assets/img/${darkMode?'icon-sun.svg':'icon-moon.svg'}`}/>

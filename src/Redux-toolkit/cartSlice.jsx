@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { toast } from 'react-toastify';
 
 const initialState = {
 cartItmes:[],
@@ -28,7 +29,9 @@ const CartSlice = createSlice({
       }else{
         existItmes.quantity++
         existItmes.totalPrice=Number(existItmes.totalPrice)+(newItmes.price)
+        
       }
+       toast.success(`product Add`)
       state.totalAmount = state.cartItmes.reduce((total,item) => total+Number(item.price) * Number(item.quantity),0)
      
     },
@@ -39,6 +42,7 @@ const CartSlice = createSlice({
        state.cartItmes=state.cartItmes.filter(itm=>itm.id !== id) 
        state.totalQuntity=state.totalQuntity-existItme.quantity
       }
+      toast.warn(`delet Product`)
        state.totalAmount = state.cartItmes.reduce((total,item) => total+Number(item.price) * Number(item.quantity),0)
     },
       decremant:(state,action)=>{
@@ -48,7 +52,7 @@ const CartSlice = createSlice({
       existItme.totalPrice=newItmes.price * existItme.quantity
       state.totalQuntity=state.totalQuntity- 1
         state.totalAmount = state.cartItmes.reduce((total,item) => total+Number(item.price) * Number(item.quantity),0)
-       
+        toast.success(`remove one product`)
       }
   }
 });
