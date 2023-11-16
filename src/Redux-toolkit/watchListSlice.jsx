@@ -18,8 +18,8 @@ const watchListSlice = createSlice({
       if(!existItmes){
         state.watchList.push({
              id:newItmes.id,
-          productName:newItmes.name,
-          image:newItmes.image_url,
+          name:newItmes.name,
+          image_url:newItmes.image_url,
           price:newItmes.price,
         })
       }
